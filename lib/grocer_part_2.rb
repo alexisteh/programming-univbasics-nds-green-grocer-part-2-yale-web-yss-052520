@@ -30,12 +30,6 @@ coupons= [
 apply_coupons(cart,coupons)
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
-end
-
-def checkout(cart, coupons)
   cart.each |itemhash| do 
     if itemhash[:clearance] = true 
       itemhash[:price] *= 0.8 
@@ -43,3 +37,18 @@ def checkout(cart, coupons)
     puts cart
     return cart 
 end
+
+cart2 = [
+  {:item => "PEANUT BUTTER", :price => 3.00, :clearance => true,  :count => 2},
+  {:item => "KALE", :price => 3.00, :clearance => false, :count => 3},
+  {:item => "SOY MILK", :price => 4.50, :clearance => true,  :count => 1}
+]
+
+apply_clearance(cart2) 
+
+def checkout(cart, coupons)
+
+end
+
+
+
