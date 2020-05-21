@@ -45,10 +45,10 @@ cart2 = [
   {:item => "SOY MILK", :price => 4.50, :clearance => true,  :count => 1}
 ]
 
-apply_clearance(cart2) 
+#apply_clearance(cart2) 
 
 def checkout(cart, coupons)
-
+  
 end
 
 
