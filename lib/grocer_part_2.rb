@@ -11,6 +11,7 @@ def apply_coupons(cart, coupons)
     cart[index_of_item_in_cart][:count] = num_left 
     cart << {:item => coupon_item + " W/COUPON" } 
     cart[-1][:price] = coupon[:cost].to_f / num_in_coupon.to_f 
+    cart[-1][:clearance] = cart[index_of_item_in_cart][:clearance] 
     cart[-1][:count] = num_applicable
   end 
   puts cart 
