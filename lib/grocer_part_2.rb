@@ -48,8 +48,21 @@ cart2 = [
 #apply_clearance(cart2) 
 
 def checkout(cart, coupons)
-  
+  cart2 = consolidate_cart(cart)
+  cart3 = apply_coupons(cart2) 
+  cart4 = apply_clearance(cart3) 
+  sum = 0 
+  cart4.each do |itemhash| 
+    amount = itemhash[:count] * itemhash[:price] 
+    sum += amount 
+  end 
+  if sum > 100 
+    sum *= 0.9 
+    return sum 
+  else return sum 
 end
+
+
 
 
 
