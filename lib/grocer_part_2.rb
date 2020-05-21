@@ -30,12 +30,13 @@ coupons= [
 apply_coupons(cart,coupons)
 
 def apply_clearance(cart)
-  cart.each |itemhash| do 
+  cart.each do |itemhash|  
     if itemhash[:clearance] = true 
       itemhash[:price] *= 0.8 
     end 
-    puts cart
-    return cart 
+  end 
+  puts cart
+  return cart 
 end
 
 cart2 = [
