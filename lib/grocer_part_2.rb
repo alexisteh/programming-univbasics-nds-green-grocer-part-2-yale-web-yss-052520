@@ -3,7 +3,7 @@ require_relative './part_1_solution.rb'
 def apply_coupons(cart, coupons)
   coupons.each |coupon| do 
     coupon_item = coupon[:item] 
-    index_of_item_in_cart = cart.index()
+    index_of_item_in_cart = cart.index(find_item_by_name_in_collection(coupon_item, cart))
     num_in_coupon = coupon[:num]
     num_in_cart = car 
 end
