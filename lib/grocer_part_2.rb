@@ -49,7 +49,7 @@ cart2 = [
 
 def checkout(cart, coupons)
   cart2 = consolidate_cart(cart)
-  cart3 = apply_coupons(cart2) 
+  cart3 = apply_coupons(cart2,coupons) 
   cart4 = apply_clearance(cart3) 
   sum = 0 
   cart4.each do |itemhash| 
