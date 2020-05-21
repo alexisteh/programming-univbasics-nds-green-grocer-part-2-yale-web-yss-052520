@@ -36,13 +36,10 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # This method should call
-  # * consolidate_cart
-  # * apply_coupons
-  # * apply_clearance
-  #
-  # BEFORE it begins the work of calculating the total (or else you might have
-  # some irritated customers
+  cart.each |itemhash| do 
+    if itemhash[:clearance] = true 
+      itemhash[:price] *= 0.8 
+    end 
+    puts cart
+    return cart 
 end
