@@ -27,7 +27,7 @@ coupons= [
   {:item => "AVOCADO", :num => 2, :cost => 5.00}
 ]
 
-apply_coupons(cart,coupons)
+#apply_coupons(cart,coupons)
 
 def apply_clearance(cart)
   cart.each do |itemhash|  
