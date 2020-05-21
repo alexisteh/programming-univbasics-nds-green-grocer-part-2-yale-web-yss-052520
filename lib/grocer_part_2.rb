@@ -22,6 +22,12 @@ cart = [
   {:item => "KALE",    :price => 3.00, :clearance => false, :count => 1}
 ]
 
+coupons= [
+  {:item => "AVOCADO", :num => 2, :cost => 5.00}
+]
+
+apply_coupons(cart,coupons)
+
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
