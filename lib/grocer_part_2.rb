@@ -39,13 +39,13 @@ def apply_clearance(cart)
   return cart 
 end
 
-cart2 = [
+carti = [
   {:item => "PEANUT BUTTER", :price => 3.00, :clearance => true,  :count => 2},
   {:item => "KALE", :price => 3.00, :clearance => false, :count => 3},
   {:item => "SOY MILK", :price => 4.50, :clearance => true,  :count => 1}
 ]
 
-#apply_clearance(cart2) 
+#apply_clearance(carti) 
 
 def checkout(cart, coupons)
   cart2 = consolidate_cart(cart)
