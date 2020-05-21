@@ -9,9 +9,11 @@ def apply_coupons(cart, coupons)
     num_applicable = (num_in_cart / num_in_coupon) * num_in_coupon 
     num_left = num_in_cart % num_in_coupon
     cart[index_of_item_in_cart][:count] = num_left 
-    cart << cart[index_of_item_in_cart]
+    hash_to_add = cart[index_of_item_in_cart]
+    cart << hash_to_add 
     cart[-1][:item] += " W/COUPON"  
     cart[-1][:price] = coupon[:cost].to_f / num_in_coupon.to_f 
+    cart[-1][:count] = num_applicable
   end 
   puts cart 
   return cart 
