@@ -9,7 +9,9 @@ def apply_coupons(cart, coupons)
     num_applicable = (num_in_cart / num_in_coupon)*num_in_coupon 
     num_left = num_in_cart % num_in_coupon
     cart[index_of_item_in_cart][:count] = num_left 
-    cart.push()
+    cart.push(cart[index_of_item_in_cart]) 
+    cart[-1][:count] = num_applicable 
+    cart[-1][]
     
 end
 
